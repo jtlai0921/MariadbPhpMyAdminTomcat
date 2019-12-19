@@ -1,0 +1,5 @@
+
+mariadb-data/*
+
+
+!mariadb-data/.keep
