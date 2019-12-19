@@ -22,6 +22,7 @@ RUN apt-get install -y maven
 
 USER jenkins 
 
+RUN mkdir ~/webapps
 ENV MAVEN_HOME /usr/share/maven
 ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 

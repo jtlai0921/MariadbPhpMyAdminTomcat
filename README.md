@@ -27,7 +27,7 @@
 * your jenkins need shell
   
  ``` lzh
- mv  /home/jenkins/workspace/target/projectName-1.0-SNAPSHOT.war /home/jenkins/workspace/projectName.war
+ mv  /home/jenkins/workspace/target/projectName-1.0-SNAPSHOT.war /home/jenkins/webapps/projectName.war
  ```
 ```ssh
 docker build -t jenkinsagent:maven3.5 .
@@ -35,7 +35,7 @@ docker build -t jenkinsagent:maven3.5 .
 docker run \
     --name jenkins_maven_agent \
     -d --restart always \
-    -v tomcat-webapps:/home/jenkins/workspace/maven_test/ \
+    -v tomcat-webapps:/home/jenkins/webapps/maven_test/ \
     jenkinsagent:maven3.5 \
     -url http://10.0.2.15:8080 \
     c11d83024cd7b90b290545c0748c5777bd92d35fa9cd83bdbc6b44f5afc43f5f \
