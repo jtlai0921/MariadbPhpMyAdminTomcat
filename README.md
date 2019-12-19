@@ -20,3 +20,15 @@
 * phpMyAdmin default port `8088`
 * tomcat default port `8080` ajp port `8009`
 * `tomcat-webapps/` you can put your war file or project directory
+
+```ssh
+docker build -t jenkinsagent:maven3.5 .
+
+docker run \
+    --name jenkins_maven_agent \
+    -d --restart always \
+    jenkinsagent:maven3.5 \
+    -url http://10.0.2.15:8080 \
+    c11d83024cd7b90b290545c0748c5777bd92d35fa9cd83bdbc6b44f5afc43f5f \
+    maven_agent 
+```
