@@ -30,13 +30,13 @@
  mv  /home/jenkins/workspace/target/projectName-1.0-SNAPSHOT.war /home/jenkins/webapps/projectName.war
  ```
 ```ssh
-docker build -t jenkinsagent:maven3.5 .
+docker build -t jenkinsagent:maven3 .
 
 docker run \
     --name jenkins_maven_agent \
     -d --restart always \
     -v tomcat-webapps:/home/jenkins/webapps/maven_test/ \
-    jenkinsagent:maven3.5 \
+    jenkinsagent:maven3 \
     -url http://10.0.2.15:8080 \
     c11d83024cd7b90b290545c0748c5777bd92d35fa9cd83bdbc6b44f5afc43f5f \
     maven_agent 
